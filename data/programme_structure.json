@@ -1,0 +1,454 @@
+{
+  "software_engineering": [
+    {
+      "Year": 1,
+      "Semester": 1,
+      "Code": "BMCS1013",
+      "Title": "PROBLEM SOLVING AND PROGRAMMING",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 1,
+      "Code": "BMCS1053",
+      "Title": "DATABASE MANAGEMENT",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 1,
+      "Code": "BMMS1613",
+      "Title": "PROBABILITY AND STATISTICS",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 1,
+      "Code": "BJEL1713",
+      "Title": "ENGLISH FOR TERTIARY STUDIES",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 1,
+      "Code": "MPU-3103",
+      "Title": "PENGHAYATAN ETIKA DAN PERADABAN",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 2,
+      "Code": "BMIS1043",
+      "Title": "SYSTEMS ANALYSIS AND DESIGN",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 2,
+      "Code": "BMMS1623",
+      "Title": "DISCRETE MATHEMATICS",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 2,
+      "Code": "BJEL1723",
+      "Title": "ACADEMIC ENGLISH",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 3,
+      "Code": "BMCS1113",
+      "Title": "COMPUTER ORGANISATION AND ARCHITECTURE",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 3,
+      "Code": "BMIT2004",
+      "Title": "FUNDAMENTALS OF COMPUTER NETWORKS",
+      "Credits": 4
+    },
+    {
+      "Year": 1,
+      "Semester": 3,
+      "Code": "BMCS2093",
+      "Title": "OPERATING SYSTEMS",
+      "Credits": 3
+    },
+    {
+      "Year": 1,
+      "Semester": 3,
+      "Code": "MPU-3302",
+      "Title": "INTEGRITY AND ANTI-CORRUPTION",
+      "Credits": 2
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BMCS2063",
+      "Title": "DATA STRUCTURES AND ALGORITHMS",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BMCS2023",
+      "Title": "OBJECT-ORIENTED PROGRAMMING",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BMSE1003",
+      "Title": "SOFTWARE ENGINEERING",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BMCS2203",
+      "Title": "ARTIFICIAL INTELLIGENCE",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BJEL2013",
+      "Title": "ENGLISH FOR CAREER PREPARATION",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "EGU2",
+      "Title": "ELECTIVE COURSE (BAHASA KEBANGSAAN A / ENTREPRENEURSHIP)",
+      "Credits": 2
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "MPU-3133",
+      "Title": "FALSAFAH DAN ISU SEMASA",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "BMSE2033",
+      "Title": "SOFTWARE REQUIREMENTS ENGINEERING",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "BMSE2073",
+      "Title": "SOFTWARE DESIGN AND ARCHITECTURE",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "EG01",
+      "Title": "ELECTIVE COURSE (WEB-BASED INTEGRATED SYSTEMS / HUMAN COMPUTER INTERACTION)",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "ECOQ",
+      "Title": "CO-CURRICULAR",
+      "Credits": 2
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BMSE2003",
+      "Title": "SOFTWARE TESTING",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BMSE2013",
+      "Title": "SOFTWARE QUALITY AND MEASUREMENT",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BMSE2023",
+      "Title": "SOFTWARE ENGINEERING ETHICS AND PROFESSIONALISM",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "EG02",
+      "Title": "ELECTIVE COURSE (ADVANCED DISCRETE MATHEMATICS / FORMAL METHODS FOR SOFTWARE ENGINEERING)",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "EG03",
+      "Title": "ELECTIVE COURSE (ADVANCED DATABASE MANAGEMENT / DATA SCIENCE)",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "EG04",
+      "Title": "ELECTIVE COURSE (INTRODUCTION TO INTERNET SECURITY / MOBILE APPLICATION DEVELOPMENT)",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "BMCS3404",
+      "Title": "PROJECT I",
+      "Credits": 4
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "BMSE3004",
+      "Title": "COLLABORATIVE DEVELOPMENT",
+      "Credits": 4
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "BMSE3003",
+      "Title": "SOFTWARE SECURITY AND SAFETY",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "BMSE3153",
+      "Title": "SOFTWARE PROJECT MANAGEMENT",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "EG05",
+      "Title": "ELECTIVE COURSE (IMAGE PROCESSING / BLOCKCHAIN APPLICATION DEVELOPMENT)",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "EG06",
+      "Title": "ELECTIVE COURSE (CLOUD COMPUTING / AGILE SOFTWARE DEVELOPMENT)",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BMCS3414",
+      "Title": "PROJECT II",
+      "Credits": 4
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BMSE3014",
+      "Title": "SOFTWARE MAINTENANCE",
+      "Credits": 4
+    },
+    {
+      "Year": 3,
+      "Semester": 3,
+      "Code": "BMIT305A",
+      "Title": "INDUSTRIAL TRAINING",
+      "Credits": 10
+    }
+  ],
+  "security": [
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BMMS1653",
+      "Title": "DISCRETE STRUCTURES",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BMIT2043",
+      "Title": "INTRODUCTION TO INTERNET SECURITY",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 1,
+      "Code": "BMIT2154",
+      "Title": "SWITCHING AND ROUTING TECHNOLOGIES",
+      "Credits": 4
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "BMCS2053",
+      "Title": "OBJECT-ORIENTED ANALYSIS AND DESIGN",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "BMIT2203",
+      "Title": "HUMAN COMPUTER INTERACTION",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "BMIT3084",
+      "Title": "ENTERPRISE NETWORKING",
+      "Credits": 4
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "BMIT2183",
+      "Title": "SOFTWARE SECURITY",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "BMIT3143",
+      "Title": "DIGITAL FORENSICS",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 2,
+      "Code": "EGU2",
+      "Title": "ELECTIVE COURSE (BAHASA KEBANGSAAN A / ENTREPRENEURSHIP)",
+      "Credits": 2
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "ECOQ",
+      "Title": "CO-CURRICULAR",
+      "Credits": 2
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BMCS2003",
+      "Title": "ARTIFICIAL INTELLIGENCE",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BMIT3173",
+      "Title": "INTEGRATIVE PROGRAMMING",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BMIT2023",
+      "Title": "WEB AND MOBILE SYSTEMS",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BMIT2083",
+      "Title": "INFORMATION ASSURANCE AND SECURITY",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "MPU-3133",
+      "Title": "FALSAFAH DAN ISU SEMASA",
+      "Credits": 3
+    },
+    {
+      "Year": 2,
+      "Semester": 3,
+      "Code": "BJEL1723",
+      "Title": "ACADEMIC ENGLISH",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "BMCS3404",
+      "Title": "PROJECT I",
+      "Credits": 4
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "BMIT3273",
+      "Title": "CLOUD COMPUTING",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 1,
+      "Code": "BMIS2113",
+      "Title": "INFORMATION TECHNOLOGY INFRASTRUCTURE",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BMCS3414",
+      "Title": "PROJECT II",
+      "Credits": 4
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BMCS3183",
+      "Title": "ADVANCED DATABASE MANAGEMENT",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BMIT3123",
+      "Title": "VULNERABILITY ASSESSMENT AND PENETRATION TESTING",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BMIT3113",
+      "Title": "SYSTEMS ADMINISTRATION",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BMSE3153",
+      "Title": "SOFTWARE PROJECT MANAGEMENT",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 2,
+      "Code": "BJEL2013",
+      "Title": "ENGLISH FOR CAREER PREPARATION",
+      "Credits": 3
+    },
+    {
+      "Year": 3,
+      "Semester": 3,
+      "Code": "BMIT305A",
+      "Title": "INDUSTRIAL TRAINING",
+      "Credits": 10
+    }
+  ]
+}

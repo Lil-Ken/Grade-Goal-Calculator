@@ -1,0 +1,93 @@
+/* CGPA page styles */
+:root{
+  --accent:#0ea5a4;
+  --accent-700:#0b8d80;
+  --accent-rgb:14,165,164;
+  --muted:#9aa6b2;
+  --card-bg:rgba(255,255,255,0.03);
+  --glass-border:rgba(255,255,255,0.06);
+} 
+
+/* Card / glass surface polish */
+.glass{
+  background:var(--card-bg);
+  border:1px solid var(--glass-border);
+  border-radius:12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.glass:hover{ transform:translateY(-3px); box-shadow:0 14px 36px rgba(0,0,0,0.55) }
+
+/* Subtle reveal animation used on sections */
+.reveal{ opacity:0; transform:translateY(10px); animation:fadeInUp .5s ease forwards }
+@keyframes fadeInUp{ to{ opacity:1; transform:none } }
+
+/* Table layout */
+#subjectsTable{ border-collapse:separate; border-spacing:0 0.45rem }
+#subjectsTable thead th{ border-bottom:0; color:var(--muted); font-weight:600; font-size:0.9rem }
+#subjectsTable tbody tr{ background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border-radius:8px }
+#subjectsTable th, #subjectsTable td{ vertical-align:middle }
+
+#subjectsTable td input.form-control, #subjectsTable td select.form-select{ min-width:120px; background:transparent; border:1px solid rgba(255, 255, 255, 0.656); color:inherit }
+#subjectsTable td input.form-control:focus, #subjectsTable td select.form-select:focus{ box-shadow:0 0 0 3px rgba(var(--accent-rgb),0.12); border-color:var(--accent) }
+
+#subjectsTable td .marks-input{ width:100px }
+#subjectsTable td .grade-select{ width:110px }
+#subjectsTable tbody tr td.code{ font-weight:700; color:#e8eef6 }
+#subjectsTable tbody tr td{ border:0; padding:0.85rem 0.75rem }
+#subjectsTable tbody tr:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.4) }
+
+/* Improved focus accessibility */
+#subjectsTable tbody tr:focus-within{ box-shadow:0 10px 22px rgba(var(--accent-rgb),0.06); outline: none }
+
+/* Focus-visible for keyboard users */
+:focus-visible{ outline: none; box-shadow:0 0 0 4px rgba(var(--accent-rgb),0.12); border-radius:6px }
+
+.btn:focus-visible{ box-shadow:0 0 0 4px rgba(var(--accent-rgb),0.14); }
+.form-control:focus-visible, .form-select:focus-visible{ box-shadow:0 0 0 4px rgba(var(--accent-rgb),0.12); border-color:var(--accent) }
+
+/* Export / icon tweaks */
+
+
+/* Empty-state visibility helper */
+#noSubjects[hidden]{ display:none }
+#noSubjects{ color:var(--muted) }
+
+
+/* Buttons and controls */
+#saveBtn{ min-width:140px }
+#clearBtn{ margin-right:8px }
+.btn[disabled]{ opacity:0.55; cursor:not-allowed }
+
+.btn-primary{ background:linear-gradient(180deg,var(--accent), var(--accent-700)); border:none }
+.btn-primary:hover{ filter:brightness(1.05) }
+
+/* Summary sections */
+.summary-section{ border-radius:10px }
+#totalCredits, #gradedCredits{ font-weight:600 }
+#gpaDisplay{ font-size:2.5rem; letter-spacing:0.02em }
+#cgpaDisplay{ font-size:1.5rem }
+#gpaNote, #cgpaNote{ color:var(--muted) }
+
+/* Small helper visuals */
+.muted{ color:var(--muted) }
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  #subjectsTable td .marks-input, #subjectsTable td .grade-select{ width:100% }
+  .display-6{ font-size:2.2rem }
+}
+
+@media (max-width: 576px){
+  #subjectsTable td .marks-input, #subjectsTable td .grade-select{ width:100% }
+  .glass{ padding:1rem }
+}
+
+/* Tiny utility */
+.small-note{ font-size:0.85rem; color:var(--muted) }
+
+/* Alert and headings */
+#cgpaAlert{ min-height:1.5rem; margin-bottom:0.6rem }
+.glass h2.h4{ margin-bottom:0 }
+
+/* End */
