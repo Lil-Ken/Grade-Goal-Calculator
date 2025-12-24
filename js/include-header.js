@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   if (!placeholder) return;
 
   try{
-    const res = await fetch('/partial/header.html', {cache:'no-store'});
+    const res = await fetch('/Calculator/partial/header.html', {cache:'no-store'});
     if (!res.ok) throw new Error('Header not found');
     const html = await res.text();
     placeholder.innerHTML = html;
