@@ -9,33 +9,67 @@
 } 
 
 /* Card / glass surface polish */
-.glass{
+/* .glass{
   background:var(--card-bg);
   border:1px solid var(--glass-border);
   border-radius:12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.45);
   transition:transform .18s ease, box-shadow .18s ease;
 }
-.glass:hover{ transform:translateY(-3px); box-shadow:0 14px 36px rgba(0,0,0,0.55) }
+.glass:hover{ transform:translateY(-3px); box-shadow:0 14px 36px rgba(0,0,0,0.55) } */
 
 /* Subtle reveal animation used on sections */
 .reveal{ opacity:0; transform:translateY(10px); animation:fadeInUp .5s ease forwards }
 @keyframes fadeInUp{ to{ opacity:1; transform:none } }
 
 /* Table layout */
-#subjectsTable{ border-collapse:separate; border-spacing:0 0.45rem }
-#subjectsTable thead th{ border-bottom:0; color:var(--muted); font-weight:600; font-size:0.9rem }
-#subjectsTable tbody tr{ background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border-radius:8px }
-#subjectsTable th, #subjectsTable td{ vertical-align:middle }
+#subjectsTable{ border-collapse:separate; border-spacing:0 0.65rem; width:100% }
+#subjectsTable thead th{
+  border-bottom:0;
+  color:var(--muted);
+  font-weight:700;
+  font-size:0.85rem;
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+  padding:0.75rem 0.9rem;
+  background:transparent;
+}
+#subjectsTable tbody tr{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:10px;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.03);
+}
+#subjectsTable th, #subjectsTable td{ vertical-align:middle; padding:0.75rem 0.9rem; border:0 }
 
-#subjectsTable td input.form-control, #subjectsTable td select.form-select{ min-width:120px; background:transparent; border:1px solid rgba(255, 255, 255, 0.656); color:inherit }
-#subjectsTable td input.form-control:focus, #subjectsTable td select.form-select:focus{ box-shadow:0 0 0 3px rgba(var(--accent-rgb),0.12); border-color:var(--accent) }
+#subjectsTable td input.form-control, #subjectsTable td select.form-select{
+  min-width:120px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  color:inherit;
+  padding:.4rem .6rem;
+  border-radius:6px;
+  box-shadow: none;
+}
+#subjectsTable td input.form-control::placeholder{ color: rgba(255,255,255,0.5) }
+#subjectsTable td input.form-control:focus, #subjectsTable td select.form-select:focus{ box-shadow:0 6px 20px rgba(var(--accent-rgb),0.08); border-color:var(--accent) }
 
-#subjectsTable td .marks-input{ width:100px }
-#subjectsTable td .grade-select{ width:110px }
-#subjectsTable tbody tr td.code{ font-weight:700; color:#e8eef6 }
-#subjectsTable tbody tr td{ border:0; padding:0.85rem 0.75rem }
-#subjectsTable tbody tr:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.4) }
+#subjectsTable td .marks-input{ width:120px; text-align:center }
+#subjectsTable td .grade-select{ width:110px; text-align:center }
+#subjectsTable tbody tr:nth-child(even){ background:linear-gradient(180deg, rgba(255,255,255,0.018), rgba(255,255,255,0.008)) }
+#subjectsTable tbody tr td.code{
+  font-weight:700;
+  color:var(--accent);
+  background: rgba(var(--accent-rgb),0.06);
+  padding:0.35rem 0.6rem;
+  border-radius:6px;
+  display:inline-block;
+}
+#subjectsTable tbody tr td.title{ color:#e8eef6; font-weight:600 }
+#subjectsTable tbody tr td{ border:0; padding:0.6rem 0.75rem }
+
+#subjectsTable tbody tr:hover{ transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,0.45); background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)) }
 
 /* Improved focus accessibility */
 #subjectsTable tbody tr:focus-within{ box-shadow:0 10px 22px rgba(var(--accent-rgb),0.06); outline: none }
@@ -89,5 +123,48 @@
 /* Alert and headings */
 #cgpaAlert{ min-height:1.5rem; margin-bottom:0.6rem }
 .glass h2.h4{ margin-bottom:0 }
+
+/* Mobile improvements */
+@media (max-width: 768px){
+  /* Tighter container padding on mobile */
+  main.container{ padding-left:1rem; padding-right:1rem }
+
+  /* Card padding and touch targets */
+  .glass{ padding:1rem }
+
+  /* Make the subjects table readable on narrow screens by stacking rows */
+  #subjectsTable thead{ display:none }
+  #subjectsTable tbody tr{ display:grid; grid-template-columns:1fr; gap:0.5rem; padding:0.75rem; border-radius:8px }
+  #subjectsTable tbody tr:hover{ transform:none; box-shadow:none }
+  #subjectsTable tbody tr td{ display:flex; justify-content:space-between; align-items:center; padding:0; border:0 }
+
+  /* Add field labels using pseudo-elements for accessibility-like context */
+  #subjectsTable tbody tr td:before{ content:attr(data-label); display:block; font-size:0.8rem; color:var(--muted); margin-right:0.6rem; font-weight:600 }
+  /* Fallback labels if data-label attributes are not present */
+  #subjectsTable tbody tr td:nth-of-type(1):before{ content:"Code" }
+  #subjectsTable tbody tr td:nth-of-type(2):before{ content:"Title" }
+  #subjectsTable tbody tr td:nth-of-type(3):before{ content:"Credits" }
+  #subjectsTable tbody tr td:nth-of-type(4):before{ content:"Grade" }
+  #subjectsTable tbody tr td:nth-of-type(5):before{ content:"Marks" }
+
+  /* Inputs should stretch to available width */
+  #subjectsTable td .marks-input, #subjectsTable td .grade-select{ width:100%; min-width:0 }
+  #subjectsTable tbody tr td.title{ flex:1 1 auto; padding-left:0.5rem; text-align:left }
+  #subjectsTable tbody tr td.code{ order:-1; width:auto; padding-right:0.5rem }
+
+  /* Stack action buttons and make them full width on small screens */
+  .d-flex.justify-content-between.gap-2.align-items-center{ flex-direction:column; gap:0.5rem; align-items:stretch }
+  .d-flex.justify-content-between.gap-2 .btn{ width:100% }
+
+  /* Slightly smaller summaries to fit */
+  .summary-section{ padding:0.9rem }
+  #gpaDisplay{ font-size:2rem }
+  #cgpaDisplay{ font-size:1.2rem }
+}
+
+@media (max-width: 420px){
+  #subjectsTable tbody tr td:before{ font-size:0.75rem }
+  .display-6{ font-size:1.8rem }
+}
 
 /* End */
