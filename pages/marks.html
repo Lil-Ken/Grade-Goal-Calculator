@@ -138,11 +138,19 @@
                   <div class="small fw-medium mb-1">Assignment Mark (?/100)</div>
                   <input type="text" inputmode="decimal" class="form-control" id="mAss" placeholder="Assignment mark"/>
                 </div>
+
+                <!-- Display computed coursework equivalent when individual mode is on -->
+                <div class="col-12 mt-3" id="courseworkComputedWrap" style="display:none;">
+                  <div class="coursework-display d-flex align-items-center justify-content-between">
+                    <div class="small fw-medium mb-0">Coursework Mark (100%)</div>
+                    <div class="coursework-badge text-muted" id="mCourseworkComputed" aria-live="polite" title="Computed from midterm and assignment">—</div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <!-- Required final -->
-            <div class="col-12 mt-5 g-0">
+            <div class="col-12 mt-4 g-0">
               <div class="need-card" id="needCard">
                 <div class="need-inner">
                   <div class="d-flex align-items-center justify-content-between">

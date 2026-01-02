@@ -292,3 +292,34 @@
     transform: translateX(2px);
   }
 }
+
+/* Computed Coursework Display */
+.coursework-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.25rem;
+}
+.coursework-badge {
+  min-width: 64px;
+  text-align: center;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.6rem;
+  font-weight: 800;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all var(--dur);
+  box-shadow: none;
+}
+.coursework-badge.has-value {
+  background: linear-gradient(90deg, var(--brand-2), var(--brand));
+  color: #061018;
+  box-shadow: 0 8px 22px rgba(11,35,46,0.22);
+  transform: translateY(-2px);
+}
+.coursework-badge[title] {
+  cursor: help;
+}

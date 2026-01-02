@@ -167,6 +167,14 @@ function compute(){
   const cFin = (wFin * (mFin ?? 0)) / 100;
   const overall = cMid + cAss + cFin;
 
+  // compute coursework equivalent (100%) when in individual marks mode
+  let courseworkEquivalent = null;
+  const courseworkWeight = wMid + wAss;
+  if (useIndividualMarks && courseworkWeight > 0 && (mMid !== null || mAss !== null)) {
+    const cw = ((wMid * (mMid ?? 0)) / 100 + (wAss * (mAss ?? 0)) / 100) / courseworkWeight * 100;
+    if (isFinite(cw)) courseworkEquivalent = Math.max(0, Math.min(100, cw));
+  }
+
   const grade = $('#goalGrade').value;
   const targetOverall = gradeScale[grade] ?? 0;
   let neededFinalPct = null;
@@ -214,6 +222,7 @@ function compute(){
     wMid,wAss,wFin, mMid,mAss,mFin,
     cMid,cAss,cFin, overall, okWeights,
     grade, targetOverall, neededFinalPct, status, needNote,
+    courseworkEquivalent,
     // consider valid weights sufficient to enable the UI even if marks are not yet entered
     hasValidData: hasWeights || hasMarks
   };
@@ -299,6 +308,24 @@ function render(state){
     }
   }
   lastLetter = letter;
+
+  // update computed coursework (100%) when in individual mode
+  const cwEl = $('#mCourseworkComputed');
+  if (cwEl) {
+    if (state.courseworkEquivalent==null || !isFinite(state.courseworkEquivalent)) {
+      cwEl.textContent = '—';
+      cwEl.classList.remove('has-value');
+      cwEl.classList.add('text-muted');
+      cwEl.removeAttribute('aria-valuenow');
+    } else {
+      const sVal = Math.round(state.courseworkEquivalent*10)/10;
+      const formatted = sVal.toFixed(1).endsWith('.0') ? String(parseInt(sVal)) : sVal.toFixed(1);
+      cwEl.textContent = formatted;
+      cwEl.classList.add('has-value');
+      cwEl.classList.remove('text-muted');
+      cwEl.setAttribute('aria-valuenow', String(sVal));
+    }
+  }
 }
 
 function computeAndRender(){
@@ -313,6 +340,8 @@ function setIndividualMarksVisible(on){
   $('#courseworkWrap').style.display = on ? 'none' : '';
   $('#midWrap').style.display = on ? '' : 'none';
   $('#assWrap').style.display = on ? '' : 'none';
+  const cwWrap = $('#courseworkComputedWrap');
+  if (cwWrap) cwWrap.style.display = on ? '' : 'none';
 }
 
 /* ----------------------- Events ----------------------- */
@@ -355,6 +384,16 @@ function bindMarkToggle(){
         $('#mMid').value = $('#mCoursework').value;
         $('#mAss').value = $('#mCoursework').value;
         clampOneDec($('#mMid')); clampOneDec($('#mAss'));
+      }
+    } else {
+      // if we have a computed coursework value from the individual inputs, copy it back
+      const cwEl = $('#mCourseworkComputed');
+      if (cwEl && cwEl.textContent && cwEl.textContent.trim() !== '—') {
+        const parsed = parseFloat(cwEl.textContent.toString().replace(',','.'));
+        if (!isNaN(parsed) && isFinite(parsed)) {
+          $('#mCoursework').value = String(parsed);
+          clampOneDec($('#mCoursework'));
+        }
       }
     }
     computeAndRender();
