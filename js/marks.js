@@ -369,7 +369,7 @@ function bindCoursePresets(){
     toggleWeightInputs(v !== '');
     if (v==='SRE' || v===''){ $('#wMid').value='24'; $('#wAss').value='36'; $('#wFin').value='40'; }
     else if (v==='SDA'){ $('#wMid').value='24'; $('#wAss').value='36'; $('#wFin').value='40'; }
-    else if (v==='WIS'){ $('#wMid').value='11.2'; $('#wAss').value='44.8'; $('#wFin').value='44'; }
+    else if (v==='WIS'){ $('#wMid').value='14'; $('#wAss').value='56'; $('#wFin').value='30'; }
     clampOneDec($('#wMid')); clampOneDec($('#wAss')); clampOneDec($('#wFin'));
     computeAndRender();
   });
